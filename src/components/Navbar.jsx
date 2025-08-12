@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo_c.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -23,8 +24,26 @@ export default function Navbar() {
     { name: 'Contact', href: 'contact' },
   ];
 
+  // Detect scroll past hero section
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.8) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full shadow-md  fixed z-50">
+    <nav
+      className={`w-full fixed z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -41,7 +60,9 @@ export default function Navbar() {
                 key={idx}
                 to={`/#${link.href}`}
                 scroll={scrollWithOffset}
-                className="text-white md:text-base font-medium hover:text-white"
+                className={`md:text-base font-medium transition-colors ${
+                  scrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-white'
+                }`}
               >
                 {link.name}
               </HashLink>
@@ -51,29 +72,31 @@ export default function Navbar() {
               href="https://wa.me/94774708984"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-50 transition"
+              className={`px-4 py-2 rounded-lg transition border ${
+                scrolled
+                  ? 'border-primary text-primary hover:bg-blue-50'
+                  : 'border-white text-white hover:bg-white hover:text-primary'
+              }`}
             >
               Contact
             </a>
-
-         
-         
-            
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
-         <a
-         href="#"
-         aria-label={isOpen ? 'Close menu' : 'Open menu'}
-         onClick={(e) => {
-         e.preventDefault();
-         toggleMenu();
-         }}
-         className="text-primary text-2xl hover:text-secondary transition"
-         >
-         {isOpen ? <FaTimes /> : <FaBars />}
-        </a>
+            <a
+              href="#"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              onClick={(e) => {
+                e.preventDefault();
+                toggleMenu();
+              }}
+              className={`text-2xl transition ${
+                scrolled ? 'text-primary' : 'text-white'
+              }`}
+            >
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </a>
           </div>
         </div>
 
@@ -99,7 +122,6 @@ export default function Navbar() {
             >
               Contact
             </a>
-            
           </div>
         )}
       </div>
