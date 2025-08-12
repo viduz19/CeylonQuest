@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <HeroSection />
       <About />
-      <Services />
+      <Services/>
       {/* <div id="global-presence"><History /></div>
       <GoogleReview />
       <div id="visa-services"><Services /></div>

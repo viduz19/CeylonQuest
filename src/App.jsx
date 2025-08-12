@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Team from './pages/Team';
 import TeamSection from './components/team/TeamMembers';
+import About from './components/About';
 
 
 
@@ -15,7 +16,9 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />}/>
         <Route path='/team' element={<Team />} />
+
         <Route path='/teamMembers' element={<TeamSection />} />
       </Routes>
     </div>
