@@ -3,10 +3,10 @@ import profile from '../assets/logo_c.png';
 
 const About = () => {
   return (
-    <div className="text-primary py-5 px-6 md:px-10 lg:px-20 min-h-screen">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div className="text-primary py-5 px-6 md:px-10 lg:px-20 min-h-screen flex items-center justify-center">
+      <div className="max-w-7xl flex flex-col md:flex-row items-center gap-10">
         {/* Left Section */}
-        <div className="w-full md:w-1/2 justify-center md:justify-start relative hidden md:block">
+        <div className="w-full md:w-1/2 justify-center md:justify-start relative hidden md:flex">
           <div className="w-[380px] h-[380px] overflow-hidden rounded-full">
             <img
               src={profile}
@@ -17,7 +17,7 @@ const About = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full text-left font-Poppins">
+        <div className="w-full text-center md:text-left font-Poppins">
           <h1 className="text-4xl md:text-6xl text-secondary mb-6">
             Your Journey Through the Island of Ceylon
           </h1>

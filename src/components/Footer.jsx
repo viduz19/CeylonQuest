@@ -9,14 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import logo from '../assets/logo_c.png';
-import footerBg from '../assets/footer.png'; // 👈 Add your footer background image here
+import footerBg from '../assets/footer.png'; // Your travel footer background
 
 const socialLinks = [
-  { name: "WhatsApp", url: "https://wa.me/94729726689", icon: faWhatsapp },
-  { name: "Facebook", url: "https://www.facebook.com/vxleducationlk", icon: faFacebookSquare },
-  { name: "Instagram", url: "https://www.instagram.com/vxledulk/", icon: faInstagramSquare },
-  { name: "LinkedIn", url: "https://www.linkedin.com/company/vxl-education-sri-lanka/", icon: faLinkedin },
-  { name: "TikTok", url: "https://www.tiktok.com/@vxleducationsrilanka", icon: faTiktok },
+  { name: "WhatsApp", url: "https://wa.me/94774708984", icon: faWhatsapp },
+  { name: "Facebook", url: "https://www.facebook.com/CeylonQuest", icon: faFacebookSquare },
+  { name: "Instagram", url: "https://www.instagram.com/ceylonquest/", icon: faInstagramSquare },
+  { name: "LinkedIn", url: "https://www.linkedin.com/company/ceylonquest/", icon: faLinkedin },
+  { name: "TikTok", url: "https://www.tiktok.com/@ceylonquest", icon: faTiktok },
 ];
 
 export default function Footer() {
@@ -24,70 +24,69 @@ export default function Footer() {
     <>
       {/* Background wrapper with image and overlay */}
       <div className="relative">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-bottom opacity-30 z-0"
           style={{ backgroundImage: `url(${footerBg})` }}
         ></div>
 
-        {/* Dark overlay for shadow effect */}
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40 z-0"></div>
 
-        {/* Actual Footer Content */}
-        <footer className="relative  text-white px-4 md:px-10 pt-12 pb-6 z-10">
+        {/* Footer Content */}
+        <footer className="relative text-white px-4 md:px-10 pt-12 pb-6 z-10">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-y-10 md:gap-x-10">
 
-            {/* Our Services */}
+            {/* Travel Services */}
             <div className="w-full md:flex-1">
-              <h3 className="text-2xl font-semibold border-b border-white pb-1 mb-4 font-Poppins">Our Services</h3>
+              <h3 className="text-2xl text-secondary font-bold border-b border-primary pb-1 mb-4 font-Poppins">
+                Our Travel Services
+              </h3>
               <ul className="list-disc list-inside space-y-1 text-primary text-sm">
-                <li><a href="#visa-services" className="hover:text-secondary">Courses and Career Counselling</a></li>
-                <li><a href="#visa-services" className="hover:text-secondary">University Applications</a></li>
-                <li><a href="#visa-services" className="hover:text-secondary">Visa Applications</a></li>
-                <li><a href="#visa-services" className="hover:text-secondary">IELTS/PTE courses/registration</a></li>
-                <li><a href="#study-abroad" className="hover:text-secondary">OSHC/Insurance</a></li>
-                <li><a href="#study-abroad" className="hover:text-secondary">Onshore Accommodation</a></li>
+                <li><a href="#food" className="hover:text-secondary">Food & Culinary Tours</a></li>
+                <li><a href="#hotels" className="hover:text-secondary">Hotels & Stays</a></li>
+                <li><a href="#safari" className="hover:text-secondary">Wildlife & Safari Tours</a></li>
+                <li><a href="#beach" className="hover:text-secondary">Beach Activities</a></li>
+                <li><a href="#cultural" className="hover:text-secondary">Cultural & Heritage Tours</a></li>
+                <li><a href="#transport" className="hover:text-secondary">Transport & Guided Trips</a></li>
               </ul>
             </div>
 
-            {/* Global Destinations */}
+            {/* Popular Destinations */}
             <div className="w-full md:flex-1">
-              <h3 className="text-2xl font-semibold border-b border-primary pb-1 mb-4 font-Poppins">Global Destinations</h3>
-              <ul className="list-disc list-inside grid grid-cols-2 gap-x-4 text-sm">
-                {["Australia", "UK", "USA", "Canada", "Germany", "France", "Spain", "UAE", "Malta", "Malaysia"].map((dest) => (
+              <h3 className="text-2xl text-secondary font-bold border-b border-primary pb-1 mb-4 font-Poppins">
+                Popular Destinations
+              </h3>
+              <ul className="list-disc text-primary list-inside grid grid-cols-2 border-primary gap-x-4 text-sm">
+                {["Colombo", "Kandy", "Galle", "Sigiriya", "Nuwara Eliya", "Ella", "Trincomalee", "Jaffna", "Mirissa", "Haputale"].map((dest) => (
                   <li key={dest}>{dest}</li>
                 ))}
               </ul>
             </div>
 
-            {/* Contact and Maps */}
+            {/* Contact & Social */}
             <div className="w-full md:flex-1">
-              <h3 className="text-2xl font-semibold border-b border-primary pb-1 mb-4">
-                Reach out to us: <br className="md:hidden" />0117 699 749
+              <h3 className="text-2xl text-secondary font-semibold border-b border-primary pb-1 mb-4">
+                Reach Us: <br className="md:hidden" />+94 77 500 8554
               </h3>
-
-              <div className="flex flex-col sm:flex-row gap-6">
-               
-
-                {/* Social Icons */}
+              <div className="flex flex-col sm:flex-row gap-6 text-primary">
                 <div className="flex sm:flex-col sm:items-center sm:justify-start gap-4 self-center sm:self-auto pt-4 sm:pt-0">
                   {socialLinks.map((link) => (
                     <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" title={link.name}>
-                      <FontAwesomeIcon icon={link.icon} className="w-5 h-5 text-white hover:text-gray-200" />
+                      <FontAwesomeIcon icon={link.icon} className="w-5 h-5 text-primary hover:text-secondary" />
                     </a>
                   ))}
                 </div>
               </div>
             </div>
+
           </div>
 
           {/* Bottom Brand Area */}
-          <div className=" mt-10 text-center text-primary py-6 text-sm font-Poppins">
+          <div className="mt-10 text-center text-primary py-6 text-sm font-Poppins">
             <div className="flex flex-col items-center justify-center space-y-4">
-              <img src={logo} alt="VXL Logo" className="h-[70px]" />
+              <img src={logo} alt="CeylonQuest Logo" className="h-[70px]" />
               <p>
-                Copyright © 2024 VXL Education Sri Lanka<br />
-                <span className="text-xs">Developed by MAD Marketing</span>
+                Copyright © 2025 CeylonQuest Sri Lanka<br />
+                <span className="text-xs">Developed by Your Company</span>
               </p>
             </div>
           </div>
@@ -96,7 +95,7 @@ export default function Footer() {
 
       {/* WhatsApp Floating Icon */}
       <a
-        href="https://wa.me/94729726689"
+        href="https://wa.me/94774708984"
         className="fixed bottom-[70px] right-4 md:right-30 bg-[#25D366] text-white w-8 h-8 md:w-[50px] md:h-[50px] rounded-full flex items-center justify-center z-50"
         target="_blank"
         rel="noopener noreferrer"

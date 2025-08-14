@@ -19,6 +19,8 @@ const Home = () => {
       <HeroSection />
       <About />
       <Services/>
+       <GoogleReview />
+      
       {/* <div id="global-presence"><History /></div>
       <GoogleReview />
       <div id="visa-services"><Services /></div>

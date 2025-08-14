@@ -1,38 +1,40 @@
 import React from 'react';
 import Slider from 'react-slick';
-import boy from '../assets/boy.webp';
-import girl from '../assets/girl.webp';
+import traveler1 from '../assets/traveler2.webp';
+import traveler2 from '../assets/traveler1.webp';
+import traveler3 from '../assets/traveler1.webp';
+import traveler4 from '../assets/traveler2.webp';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const reviews = [
   {
-    image: boy,
-    name: "Nipuna Liyanage",
+    image: traveler1,
+    name: "Amila Perera",
     description:
-      "I had a frustrating experience with CityPak. Although my tracking showed 'unable to contact,' I never received a call despite having the correct number. After several days without updates, I had to visit their Yakkala branch to collect the package myself. Their lack of professionalism and poor communication were disappointing. I wouldn’t recommend CityPak if you value reliability and good service.",
+      "CeylonQuest made our trip to Sri Lanka unforgettable! From cultural tours to scenic adventures, everything was perfectly organized. Highly recommend for an authentic island experience!",
   },
   {
-    image: boy,
-    name: "Nethangi Piyasena",
+    image: traveler2,
+    name: "Nethmi Fernando",
     description:
-      "I am truly grateful to VXL Education, especially Mr. Ayodya, for his excellent support throughout my visa application. The process was entirely online, with regular Zoom meetings and quick responses whenever I needed help. Mr. Ayodya’s professionalism and friendly approach made the experience stress-free. I would confidently recommend VXL Education to anyone seeking reliable assistance.",
+      "The beach and safari tours arranged by CeylonQuest were fantastic. The guides were friendly and knowledgeable, and every detail was taken care of. A truly stress-free vacation.",
   },
   {
-    image: girl,
-    name: "Udayantha Giragama",
+    image: traveler3,
+    name: "Kasun Jayawardena",
     description:
-      "Applying for my Australian visitor visa with VXL Education was a smooth and pleasant experience. Their team showed great attention to detail, provided clear guidance, and communicated promptly. Special thanks to Ayodhya Kodagoda for the personal support and professionalism. Thanks to them, my visa was approved without any issues. I strongly recommend VXL Education to others.",
+      "I loved the cultural tours! Visiting ancient temples and heritage sites with CeylonQuest was informative and fun. The team’s passion for Sri Lanka really shines through.",
   },
   {
-    image: boy,
-    name: "Asitha Kottachchi",
+    image: traveler4,
+    name: "Shanika Silva",
     description:
-      "VXL Education Sri Lanka stands out for their outstanding guidance, especially for student visas and subsequent entrant visas. They offer clear, step-by-step instructions that make the entire process easy. Special appreciation to Ms. Surani and Ms. Hasintha for their dedicated support and expertise. For anyone needing trustworthy educational consultancy, I highly recommend VXL Education.",
+      "Our family trip was amazing thanks to CeylonQuest. From comfortable transportation to local insights, they made sure we had a smooth and memorable journey across Sri Lanka.",
   },
 ];
 
-const GoogleReview = () => {
+const TravelReview = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -43,21 +45,15 @@ const GoogleReview = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 }
-      }
-    ]
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+    ],
   };
 
   return (
     <div className="py-10 bg-white px-5 font-Poppins">
       <h2 className="text-4xl md:text-6xl font-base text-center mb-10 text-primary">
-        They <span className="text-secondary">Excelled</span> with VXL
+        Our Travelers <span className="text-secondary">Loved</span> Their Journey
       </h2>
 
       <div className="max-w-7xl mx-auto">
@@ -75,7 +71,7 @@ const GoogleReview = () => {
                     {review.name}
                   </h3>
                 </div>
-                <p className="text-xl md:text-base text-justify  text-primary leading-relaxed">
+                <p className="text-base md:text-sm text-justify text-primary leading-relaxed">
                   "{review.description}"
                 </p>
               </div>
@@ -87,4 +83,4 @@ const GoogleReview = () => {
   );
 };
 
-export default GoogleReview;
+export default TravelReview;
