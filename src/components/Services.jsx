@@ -1,11 +1,11 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
     key: "food",
     title: "Food & Culinary Tours",
-    image:"src/assets/food.webp",
+    image: "src/assets/food.webp",
     description:
       "Taste Sri Lanka’s vibrant flavors with authentic food tours, cooking classes, and street food.",
   },
@@ -47,9 +47,11 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const navigate = useNavigate();
+
   return (
     <section
-      className="relative py-12 bg-cover bg-center "
+      className="relative py-12 bg-cover bg-center"
       style={{ backgroundImage: `url(${"src/assets/service-bg1.png"})` }}
       aria-label="Our Services Section"
     >
@@ -73,11 +75,13 @@ export default function ServicesSection() {
                 loading="lazy"
               />
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {title}
+                </h3>
                 <p className="text-gray-700 flex-grow">{description}</p>
                 <button
                   className="mt-6 px-5 py-2 rounded-lg text-white bg-gradient-to-r from-[#e76b37] to-[#003c3a] hover:opacity-90 hover:scale-105 transform transition duration-300 cursor-pointer"
-                  onClick={() => alert(`Learn more about ${title}`)}
+                  onClick={() => navigate(`/services/${key}`)}
                   aria-label={`Learn more about ${title}`}
                 >
                   Learn More

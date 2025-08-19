@@ -95,7 +95,7 @@ export default function Footer() {
 
       {/* WhatsApp Floating Icon */}
       <a
-        href="https://wa.me/94774708984"
+        href="https://wa.me/94774456214"
         className="fixed bottom-[70px] right-4 md:right-30 bg-[#25D366] text-white w-8 h-8 md:w-[50px] md:h-[50px] rounded-full flex items-center justify-center z-50"
         target="_blank"
         rel="noopener noreferrer"

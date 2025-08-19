@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
-import study1 from '../assets/study1.webp';
-import study2 from '../assets/study2.webp';
+import study1 from '../assets/food.webp';
+import study2 from '../assets/food.webp';
 
 const onshoreServices = [
   {
