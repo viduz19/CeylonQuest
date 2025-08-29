@@ -1,24 +1,22 @@
 import React from "react";
 import servicesData from "../data/servicesData.json";
 
-// Import all images used in JSON
-import foodHero from "../assets/food.webp";
-import colomboImg from "../assets/colombo-market.webp";
-import galleImg from "../assets/Galle-food.jpg";
-import ellaImg from "../assets/Elle-tea.webp";
-import jaffnaImg from "../assets/Jaffna-food.webp";
+// Import all images used in Beach service
+import beachHero from "../assets/beach.webp";
+import unawatunaImg from "../assets/beach.webp";
+import trincomaleeImg from "../assets/beach.webp";
+import arugamImg from "../assets/beach.webp";
 
 // Map JSON paths to imported images
 const imageMap = {
-  "src/assets/food.webp": foodHero,
-  "src/assets/colombo-market.webp": colomboImg,
-  "src/assets/Galle-food.jpg": galleImg,
-  "src/assets/Elle-tea.webp": ellaImg,
-  "src/assets/Jaffna-food.webp": jaffnaImg
+  "src/assets/beach.webp": beachHero,
+  "src/assets/unawatuna.jpg": unawatunaImg,
+  "src/assets/trincomalee.jpg": trincomaleeImg,
+  "src/assets/arugam.jpg": arugamImg,
 };
 
-const FoodService = () => {
-  const service = servicesData.find(item => item.key === "food");
+const BeachService = () => {
+  const service = servicesData.find((item) => item.key === "beach");
 
   if (!service) return <p>Service not found</p>;
 
@@ -38,7 +36,7 @@ const FoodService = () => {
 
       {/* Intro */}
       <section className="py-12 px-6 max-w-6xl mx-auto text-center">
-        <p className="text-lg md:text-xl text-primary">{service.intro}</p>
+        <p className="text-lg md:text-xl text-gray-700">{service.intro}</p>
       </section>
 
       {/* Experiences */}
@@ -56,9 +54,9 @@ const FoodService = () => {
       {/* Locations */}
       <section className="py-10 px-6 bg-gray-50">
         <h2 className="text-2xl font-bold text-secondary mb-6 text-center">
-          Best Locations
+          Best Beaches
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {service.locations.map((loc, idx) => (
             <div
               key={idx}
@@ -70,7 +68,7 @@ const FoodService = () => {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4 text-center">
-                <p className="text-gray-700 font-medium">{loc.name}</p>
+                <h3 className="font-semibold text-lg">{loc.name}</h3>
               </div>
             </div>
           ))}
@@ -78,19 +76,14 @@ const FoodService = () => {
       </section>
 
       {/* Why Choose */}
-      <section className="py-10 px-6 max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">✅ Why Choose Us?</h2>
-        <p className="text-gray-700">{service.whyChoose}</p>
+      <section className="py-12 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-2xl font-bold text-secondary mb-4">
+          Why Choose Us
+        </h2>
+        <p className="text-lg text-gray-700">{service.whyChoose}</p>
       </section>
-
-      {/* CTA */}
-      <div className="text-center py-12">
-        <button className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full shadow-lg text-lg font-medium transition">
-          Book Now
-        </button>
-      </div>
     </div>
   );
 };
 
-export default FoodService;
+export default BeachService;

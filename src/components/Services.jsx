@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const services = [
@@ -46,16 +46,36 @@ const services = [
   },
 ];
 
+const sliderImages = [
+  "src/assets/food.webp",
+  "src/assets/hotel.webp",
+  "src/assets/safari.webp",
+  "src/assets/beach.webp",
+  "src/assets/cultural.webp",
+  "src/assets/transport.jpg",
+];
+
 export default function ServicesSection() {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // auto slide every 5s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
-      className="relative py-12 bg-cover bg-center"
-      style={{ backgroundImage: `url(${"src/assets/service-bg1.png"})` }}
+      className="relative py-12 bg-cover bg-center transition-all duration-1000"
+      style={{ backgroundImage: `url(${sliderImages[currentIndex]})` }}
       aria-label="Our Services Section"
     >
+      {/* dark overlay */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
       <div className="relative max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-white">
           Our Services

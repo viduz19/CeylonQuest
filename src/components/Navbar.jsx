@@ -10,16 +10,16 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Scroll offset for fixed navbar (adjust 80px as needed)
+  // Scroll offset for fixed navbar
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80;
+    const yOffset = -80; // navbar height
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
   const navLinks = [
-    { name: 'About us', href: '/about' },       // Full page navigation
-    { name: 'Our Services', href: 'visa-services' },  // Hash links
+    { name: 'About us', href: 'about' },
+    { name: 'Our Services', href: 'services' },
     { name: 'Travel life', href: 'global-partners' },
     { name: 'Explore', href: 'global-presence' },
     { name: 'Contact', href: 'contact' },
@@ -56,42 +56,22 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link, idx) => {
-              if (link.href.startsWith('/')) {
-                // Full page route navigation
-                return (
-                  <Link
-                    key={idx}
-                    to={link.href}
-                    className={`md:text-base font-medium transition-colors ${
-                      scrolled
-                        ? 'text-primary hover:text-secondary'
-                        : 'text-white hover:text-white'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              } else {
-                // Hash scrolling inside home page
-                return (
-                  <HashLink
-                    key={idx}
-                    to={`/#${link.href}`}
-                    scroll={scrollWithOffset}
-                    className={`md:text-base font-medium transition-colors ${
-                      scrolled
-                        ? 'text-primary hover:text-secondary'
-                        : 'text-white hover:text-white'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </HashLink>
-                );
-              }
-            })}
+            {navLinks.map((link, idx) => (
+              <HashLink
+                key={idx}
+                smooth
+                to={`/#${link.href}`}
+                scroll={scrollWithOffset}
+                className={`md:text-base font-medium transition-colors ${
+                  scrolled
+                    ? 'text-primary hover:text-secondary'
+                    : 'text-white hover:text-white'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </HashLink>
+            ))}
 
             <a
               href="https://wa.me/94774708984"
@@ -103,7 +83,7 @@ export default function Navbar() {
                   : 'border-white text-white hover:bg-white hover:text-primary'
               }`}
             >
-              Contact
+              WhatsApp
             </a>
           </div>
 
@@ -124,32 +104,18 @@ export default function Navbar() {
         {/* Mobile Dropdown Menu */}
         {isOpen && (
           <div className="md:hidden flex flex-col items-start bg-white py-4 space-y-3">
-            {navLinks.map((link, idx) => {
-              if (link.href.startsWith('/')) {
-                return (
-                  <Link
-                    key={idx}
-                    to={link.href}
-                    className="block w-full px-4 py-2 text-primary hover:bg-blue-50"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              } else {
-                return (
-                  <HashLink
-                    key={idx}
-                    to={`/#${link.href}`}
-                    scroll={scrollWithOffset}
-                    onClick={() => setIsOpen(false)}
-                    className="block w-full px-4 py-2 text-primary hover:bg-blue-50"
-                  >
-                    {link.name}
-                  </HashLink>
-                );
-              }
-            })}
+            {navLinks.map((link, idx) => (
+              <HashLink
+                key={idx}
+                smooth
+                to={`/#${link.href}`}
+                scroll={scrollWithOffset}
+                onClick={() => setIsOpen(false)}
+                className="block w-full px-4 py-2 text-primary hover:bg-blue-50"
+              >
+                {link.name}
+              </HashLink>
+            ))}
             <a
               href="https://wa.me/94774708984"
               target="_blank"
@@ -157,7 +123,7 @@ export default function Navbar() {
               className="block w-full px-4 py-2 border-t text-primary border-blue-600"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              WhatsApp
             </a>
           </div>
         )}

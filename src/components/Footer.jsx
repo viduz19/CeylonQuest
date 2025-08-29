@@ -108,7 +108,7 @@ export default function Footer() {
       <a
         href="#"
         title="Back to top"
-        className="fixed bottom-5 right-4 md:right-30 bg-primary text-white w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full z-50"
+        className="fixed bottom-5 right-4 md:right-30 bg-secondary text-white w-5 h-5 md:w-12 md:h-12 flex items-center justify-center rounded-full z-50"
       >
         <i className="bi bi-arrow-up text-sm md:text-lg"></i>
       </a>

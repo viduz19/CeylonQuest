@@ -1,24 +1,24 @@
 import React from "react";
 import servicesData from "../data/servicesData.json";
 
-// Import all images used in JSON
-import foodHero from "../assets/food.webp";
-import colomboImg from "../assets/colombo-market.webp";
-import galleImg from "../assets/Galle-food.jpg";
-import ellaImg from "../assets/Elle-tea.webp";
-import jaffnaImg from "../assets/Jaffna-food.webp";
+// Import all images used in Safari service
+import safariHero from "../assets/safari.webp";
+import yalaImg from "../assets/safari.webp";
+import udawalaweImg from "../assets/safari.webp";
+import wilpattuImg from "../assets/safari.webp";
+import minneriyaImg from "../assets/safari.webp";
 
 // Map JSON paths to imported images
 const imageMap = {
-  "src/assets/food.webp": foodHero,
-  "src/assets/colombo-market.webp": colomboImg,
-  "src/assets/Galle-food.jpg": galleImg,
-  "src/assets/Elle-tea.webp": ellaImg,
-  "src/assets/Jaffna-food.webp": jaffnaImg
+  "src/assets/safari.webp": safariHero,
+  "src/assets/yala.jpg": yalaImg,
+  "src/assets/udawalawe.jpg": udawalaweImg,
+  "src/assets/wilpattu.jpg": wilpattuImg,
+  "src/assets/minneriya.jpg": minneriyaImg,
 };
 
-const FoodService = () => {
-  const service = servicesData.find(item => item.key === "food");
+const SafariService = () => {
+  const service = servicesData.find((item) => item.key === "safari");
 
   if (!service) return <p>Service not found</p>;
 
@@ -58,7 +58,7 @@ const FoodService = () => {
         <h2 className="text-2xl font-bold text-secondary mb-6 text-center">
           Best Locations
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {service.locations.map((loc, idx) => (
             <div
               key={idx}
@@ -85,12 +85,12 @@ const FoodService = () => {
 
       {/* CTA */}
       <div className="text-center py-12">
-        <button className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full shadow-lg text-lg font-medium transition">
-          Book Now
+        <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full shadow-lg text-lg font-medium transition">
+          Book Safari
         </button>
       </div>
     </div>
   );
 };
 
-export default FoodService;
+export default SafariService;

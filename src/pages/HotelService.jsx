@@ -1,24 +1,22 @@
 import React from "react";
 import servicesData from "../data/servicesData.json";
 
-// Import all images used in JSON
-import foodHero from "../assets/food.webp";
-import colomboImg from "../assets/colombo-market.webp";
-import galleImg from "../assets/Galle-food.jpg";
-import ellaImg from "../assets/Elle-tea.webp";
-import jaffnaImg from "../assets/Jaffna-food.webp";
+// Import all images used in Hotels service
+import hotelHero from "../assets/hotel.webp";
+import hotel1Img from "../assets/hotel.webp";
+import hotel2Img from "../assets/hotel.webp";
+import hotel3Img from "../assets/hotel.webp";
 
 // Map JSON paths to imported images
 const imageMap = {
-  "src/assets/food.webp": foodHero,
-  "src/assets/colombo-market.webp": colomboImg,
-  "src/assets/Galle-food.jpg": galleImg,
-  "src/assets/Elle-tea.webp": ellaImg,
-  "src/assets/Jaffna-food.webp": jaffnaImg
+  "src/assets/hotel.webp": hotelHero,
+  "src/assets/hotel1.jpg": hotel1Img,
+  "src/assets/hotel2.jpg": hotel2Img,
+  "src/assets/hotel3.jpg": hotel3Img,
 };
 
-const FoodService = () => {
-  const service = servicesData.find(item => item.key === "food");
+const HotelService = () => {
+  const service = servicesData.find((item) => item.key === "hotels");
 
   if (!service) return <p>Service not found</p>;
 
@@ -58,7 +56,7 @@ const FoodService = () => {
         <h2 className="text-2xl font-bold text-secondary mb-6 text-center">
           Best Locations
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {service.locations.map((loc, idx) => (
             <div
               key={idx}
@@ -93,4 +91,4 @@ const FoodService = () => {
   );
 };
 
-export default FoodService;
+export default HotelService;

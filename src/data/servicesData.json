@@ -1,0 +1,119 @@
+[
+  {
+    "key": "food",
+    "title": "Food & Culinary Tours",
+    "subtitle": "Taste the Island’s Flavors",
+    "hero": "src/assets/food.webp",
+    "intro": "Sri Lankan food is bold, colorful, and unforgettable. From spicy curries to coconut-infused sambols, every dish carries centuries of tradition. At CeylonQuest, we take you beyond restaurants and into real food journeys.",
+    "experiences": [
+      "Guided market tours in Colombo, Kandy, or Galle",
+      "Learn to cook hoppers, kottu roti, and seafood curries with local chefs",
+      "Visit tea estates in Nuwara Eliya & sip Ceylon’s world-famous tea",
+      "Try authentic street food adventures (isso wade, kottu, achcharu)"
+    ],
+    "locations": [
+      { "name": "Pettah Market, Colombo", "img": "src/assets/colombo-market.webp" },
+      { "name": "Galle Fort Food Trails", "img": "src/assets/Galle-food.jpg" },
+      { "name": "Ella & Nuwara Eliya Tea Country", "img": "src/assets/Elle-tea.webp" },
+      { "name": "Jaffna Spicy Cuisine Experiences", "img": "src/assets/Jaffna-food.webp" }
+    ],
+    "whyChoose": "Small group tours | Local hosts | Vegetarian-friendly options"
+  },
+  
+  {
+    "key": "hotels",
+    "title": "Hotels & Stays",
+    "subtitle": "Your Home Away From Home",
+    "hero": "src/assets/hotel.webp",
+    "intro": "Whether you dream of waking up to ocean waves or misty mountains, Sri Lanka has it all. With CeylonQuest, we handpick the best stays tailored to your comfort and budget.",
+    "experiences": [
+      "Luxury Resorts – beachfront villas & spas",
+      "Boutique Hotels – stylish and unique stays",
+      "Eco-Lodges – sustainable, nature-connected stays",
+      "Homestays & Guesthouses – authentic village hospitality"
+    ],
+    "locations": [
+      { "name": "Galle & Bentota (beachfront luxury)", "img": "src/assets/hotel1.jpg" },
+      { "name": "Ella & Nuwara Eliya (hill country villas)", "img": "src/assets/hotel2.jpg" },
+      { "name": "Sigiriya (eco-resorts near ancient sites)", "img": "src/assets/hotel3.jpg" }
+    ],
+    "whyChoose": "Verified partners | 24/7 support | Custom packages"
+  },
+  {
+    "key": "safari",
+    "title": "Wildlife & Safari Tours",
+    "subtitle": "Into the Wild",
+    "hero": "src/assets/safari.webp",
+    "intro": "Sri Lanka is one of the best safari destinations outside Africa. With our guided tours, experience thrilling encounters with elephants, leopards, and exotic birdlife.",
+    "experiences": [
+      "Jeep safaris with licensed naturalists",
+      "The great elephant gathering in Minneriya",
+      "Whale watching in Mirissa",
+      "Birdwatching in Bundala & Sinharaja Rainforest"
+    ],
+    "locations": [
+      { "name": "Yala – leopard territory", "img": "src/assets/yala.jpg" },
+      { "name": "Udawalawe – elephant paradise", "img": "src/assets/udawalawe.jpg" },
+      { "name": "Wilpattu – ancient forest trails", "img": "src/assets/wilpattu.jpg" },
+      { "name": "Minneriya – annual elephant gathering", "img": "src/assets/minneriya.jpg" }
+    ],
+    "whyChoose": "Eco-friendly tours | Safety-first | Experienced rangers"
+  },
+  {
+    "key": "beach",
+    "title": "Beach Activities",
+    "subtitle": "Sun, Surf & Sand",
+    "hero": "src/assets/beach.webp",
+    "intro": "With over 1,300 km of coastline, Sri Lanka is a paradise for beach lovers. From tranquil bays to surfing hotspots, there’s a stretch of sand for everyone.",
+    "experiences": [
+      "Surfing in Arugam Bay",
+      "Snorkeling & diving in Trincomalee",
+      "Whale & dolphin watching in Mirissa",
+      "Beach yoga & wellness retreats"
+    ],
+    "locations": [
+      { "name": "Unawatuna & Hikkaduwa (South)", "img": "src/assets/unawatuna.jpg" },
+      { "name": "Trincomalee & Nilaveli (East)", "img": "src/assets/trincomalee.jpg" },
+      { "name": "Arugam Bay (Surfing capital)", "img": "src/assets/arugam.jpg" }
+    ],
+    "whyChoose": "Handpicked guides | Adventure + relaxation | Safe for families"
+  },
+  {
+    "key": "cultural",
+    "title": "Cultural & Heritage Tours",
+    "subtitle": "Walk Through History",
+    "hero": "src/assets/cultural.webp",
+    "intro": "Sri Lanka’s culture blends Buddhism, Hinduism, colonial influences, and traditions that go back thousands of years.",
+    "experiences": [
+      "The Sacred Tooth Relic Temple in Kandy",
+      "Ancient rock fortress of Sigiriya",
+      "UNESCO sites: Polonnaruwa, Anuradhapura",
+      "Kandyan dance & local festivals"
+    ],
+    "locations": [
+      { "name": "Cultural Triangle (Sigiriya, Dambulla, Polonnaruwa)", "img": "src/assets/sigiriya.jpg" },
+      { "name": "Kandy Perahera festival", "img": "src/assets/kandy.jpg" },
+      { "name": "Jaffna Hindu temples", "img": "src/assets/jaffna.jpg" }
+    ],
+    "whyChoose": "Expert cultural guides | Small group tours | Authentic experiences"
+  },
+  {
+    "key": "transport",
+    "title": "Transport & Guided Trips",
+    "subtitle": "Seamless Journeys Across Sri Lanka",
+    "hero": "src/assets/transport.jpg",
+    "intro": "Getting around Sri Lanka is part of the adventure! With CeylonQuest, we make sure you travel comfortably and safely.",
+    "experiences": [
+      "Private cars & vans with English-speaking drivers",
+      "Scenic train journeys (Colombo–Ella)",
+      "Airport pickup & drop services",
+      "Group transport for tours"
+    ],
+    "locations": [
+      { "name": "Colombo – Airport & city transfer", "img": "src/assets/colombo-transport.jpg" },
+      { "name": "Kandy – Hill country routes", "img": "src/assets/kandy-transport.jpg" },
+      { "name": "Southern Coast – Beach transfers", "img": "src/assets/south-transport.jpg" }
+    ],
+    "whyChoose": "Licensed drivers with local expertise | Modern, air-conditioned vehicles | Flexible schedules"
+  }
+]
