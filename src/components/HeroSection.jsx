@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './Navbar';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,15 +28,13 @@ const HeroSection = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-screen overflow-hidden bg-gray-900">
         {/* Background images with fade animation */}
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-              index === currentImageIndex ? 'opacity-100 z-0' : 'opacity-0'
-            }`}
+            className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100 z-0' : 'opacity-0'
+              }`}
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}
@@ -58,8 +56,8 @@ const HeroSection = () => {
               <br /> embark on a timeless journey across the island of Ceylon.
             </p>
             <button className="mt-8 inline-flex items-center gap-3 bg-white text-primary px-6 py-3 rounded-full hover:bg-[#2a7520] transition">
-              Contact        
-              
+              Contact
+
             </button>
           </div>
         </div>
